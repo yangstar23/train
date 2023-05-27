@@ -137,3 +137,30 @@ server.servlet.context-path=/member
 # 把log文件夹忽略上传git
 log/
 ```
+
+
+
+
+
+## HTTPClient完成测试接口
+
+![image-20230527192446400](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527192446400.png)
+
+![image-20230527192626740](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527192626740.png)
+
+结果:
+
+![image-20230527192637058](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527192637058.png)
+
+
+
+
+
+也可以自己创建.http文件,然后输入gtr让他写出模板
+
+![image-20230527192838805](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527192838805.png)
+
+
+
+这些文件方便别人测试,所以可以提交到git
+
