@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# 把log文件夹忽略上传git
+log/
