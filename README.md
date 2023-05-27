@@ -305,3 +305,13 @@ public class LogAspect {
 成功区分两次请求
 
 ![image-20230527211347731](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527211347731.png)
+
+
+
+
+
+## 添加通用模块
+
+先把demo01和member里面的内容移动到common的pom.xml里
+
+ 

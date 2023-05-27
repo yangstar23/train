@@ -1,4 +1,4 @@
-package com.yangstar.train.member.aspect;
+package com.example.yangstar.train.common.aspect;
 
 import cn.hutool.core.util.RandomUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -34,7 +34,7 @@ public class LogAspect {
      * 定义一个切点
      */
     //通用的写法
-    @Pointcut("execution(public * com.yangstar..*Controller.*(..))")
+    @Pointcut("execution(public * com.example.yangstar..*Controller.*(..))")
     public void controllerPointcut() {
     }
 
@@ -42,7 +42,7 @@ public class LogAspect {
     public void doBefore(JoinPoint joinPoint) {
         //增加日志流水号
         //有概率重复
-        MDC.put("LOG_ID",System.currentTimeMillis() + RandomUtil.randomString(6));
+        MDC.put("LOG_ID",System.currentTimeMillis() + RandomUtil.randomString(3));
 
         // 开始打印请求日志
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
