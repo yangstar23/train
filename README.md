@@ -19,6 +19,8 @@
 
 # 日志
 
+## 
+
 ```java
 添加固定代码
 public class MemberApplication {
@@ -37,8 +39,25 @@ public class MemberApplication {
 
 
 
-banner的作用
+## banner的作用
 
 
 
-![image-20230527162600656](C:\Users\yangstar\AppData\Roaming\Typora\typora-user-images\image-20230527162600656.png)
+![image-20230527162600656](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527162600656.png)
+
+
+
+
+
+## 添加固定前缀
+
+```
+server.servlet.context-path=/member
+```
+
+![image-20230527163127642](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527163127642.png)
+
+
+
+
+
