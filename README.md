@@ -164,3 +164,12 @@ log/
 
 这些文件方便别人测试,所以可以提交到git
 
+
+
+
+
+## 增加AOP打印请求参数和返回结果
+
+一般用aop或者拦截器,这样没有侵入性
+
+![image-20230527193404952](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527193404952.png)
