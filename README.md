@@ -19,7 +19,7 @@
 
 # 日志
 
-## 
+## 添加固定代码
 
 ```java
 添加固定代码
@@ -57,7 +57,7 @@ server.servlet.context-path=/member
 
 ![image-20230527163127642](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527163127642.png)
 
-
+单体应用的话可以不加
 
 
 
