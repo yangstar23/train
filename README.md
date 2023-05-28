@@ -325,3 +325,39 @@ public class LogAspect {
 其他模块的话放在resources下就可以 
 
 ![image-20230528121206070](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528121206070.png)
+
+
+
+## 网关模块
+
+新建一个模块
+
+![image-20230528121836790](C:\Users\yangstar\AppData\Roaming\Typora\typora-user-images\image-20230528121836790.png)
+
+调整pom.xml,把它设置成一个网关
+
+```xml
+<dependencies>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-gateway</artifactId>
+</dependency>
+
+</dependencies>
+```
+
+另外gateway只有一个依赖,不能引入common,也不能引入starter-web
+
+
+
+然后复制logback-spring.xml过去
+
+
+
+
+
+怎么添加多个微服务一起运行
+
+![image-20230528122955518](C:\Users\yangstar\AppData\Roaming\Typora\typora-user-images\image-20230528122955518.png)
+
+![image-20230528123028566](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528123028566.png)

@@ -272,3 +272,41 @@
 2023-05-28 12:13:50.307 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
 2023-05-28 12:13:50.307 INFO  c.yangstar.train.member.config.MemberApplication  :20   [32m                  [0;39m 启动成功！！
 2023-05-28 12:13:50.307 INFO  c.yangstar.train.member.config.MemberApplication  :21   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-05-28 12:26:58.014 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 45480 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-05-28 12:26:58.017 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-28 12:26:58.055 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-28 12:26:58.055 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-28 12:26:58.513 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=a1c63f2a-71b2-3a2e-82be-283d66126288
+2023-05-28 12:26:58.996 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-05-28 12:26:59.004 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-05-28 12:26:59.005 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-28 12:26:59.005 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-05-28 12:26:59.053 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-28 12:26:59.054 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 998 ms
+2023-05-28 12:26:59.436 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-28 12:27:00.687 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-05-28 12:27:00.725 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2023-05-28 12:27:00.745 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2023-05-28 12:27:02.008 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-05-28 12:27:02.015 INFO  c.yangstar.train.member.config.MemberApplication  :57   [32m                  [0;39m Started MemberApplication in 5.655 seconds (process running for 6.218)
+2023-05-28 12:27:02.018 INFO  c.yangstar.train.member.config.MemberApplication  :20   [32m                  [0;39m 启动成功！！
+2023-05-28 12:27:02.018 INFO  c.yangstar.train.member.config.MemberApplication  :21   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-05-28 12:31:32.868 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 40972 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-05-28 12:31:32.871 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-28 12:31:32.912 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-28 12:31:32.912 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-28 12:31:33.492 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=a1c63f2a-71b2-3a2e-82be-283d66126288
+2023-05-28 12:31:34.050 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-05-28 12:31:34.059 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-05-28 12:31:34.060 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-28 12:31:34.061 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-05-28 12:31:34.116 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-28 12:31:34.116 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1203 ms
+2023-05-28 12:31:34.554 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-28 12:31:35.836 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-05-28 12:31:35.875 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2023-05-28 12:31:35.899 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2023-05-28 12:31:37.143 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-05-28 12:31:37.151 INFO  c.yangstar.train.member.config.MemberApplication  :57   [32m                  [0;39m Started MemberApplication in 5.952 seconds (process running for 6.541)
+2023-05-28 12:31:37.153 INFO  c.yangstar.train.member.config.MemberApplication  :20   [32m                  [0;39m 启动成功！！
+2023-05-28 12:31:37.153 INFO  c.yangstar.train.member.config.MemberApplication  :21   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
