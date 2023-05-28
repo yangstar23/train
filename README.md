@@ -315,3 +315,13 @@ public class LogAspect {
 先把demo01和member里面的内容移动到common的pom.xml里
 
  
+
+关于application.properties的位置
+
+![image-20230528121114618](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528121114618.png)
+
+增加了公共配置文件，需要放到resources/config/下,这个优先级更加高一些
+
+其他模块的话放在resources下就可以 
+
+![image-20230528121206070](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528121206070.png)
