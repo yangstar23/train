@@ -53,11 +53,12 @@ public class MemberApplication {
 
 ```
 server.servlet.context-path=/member
+在application.properties中修改
 ```
 
 ![image-20230527163127642](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527163127642.png)
 
-单体应用的话可以不加
+单体应用的话可以不加,微服务多了的话可以起到区分的作用
 
 
 
@@ -66,6 +67,12 @@ server.servlet.context-path=/member
 
 
 ## logback-spring(固定代码)
+
+作用是打印日志
+
+放在resources目录之下
+
+需要修改一下第4行的目录
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -129,9 +136,9 @@ server.servlet.context-path=/member
 
 
 
-.gitignore
+关于.gitignore
 
-约定大于配置
+具体思维是:约定大于配置
 
 ```
 # 把log文件夹忽略上传git
@@ -143,6 +150,8 @@ log/
 
 
 ## HTTPClient完成测试接口
+
+可以自己访问地址测试,但是也可以使用接口工具来测试,更加方便
 
 ![image-20230527192446400](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527192446400.png)
 
@@ -170,7 +179,7 @@ log/
 
 ## 增加AOP打印请求参数和返回结果
 
-一般用aop或者拦截器,这样没有侵入性
+实现这个目的,一般用aop或者拦截器,这样没有侵入性
 
 ![image-20230527193404952](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230527193404952.png)
 
@@ -204,8 +213,14 @@ log/
 
 复制固定代码 LogAspect
 
+因为这个东西所有的项目都可以用到
+
+所有我们把它放在common下的aspect文件家里就行
+
+![image-20230528134106758](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528134106758.png)
+
 ```java
-package com.yangstar.train.member.aspect;
+package com.yangstar.train.common.aspect;
 
 import cn.hutool.core.util.RandomUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -248,6 +263,7 @@ public class LogAspect {
     @Before("controllerPointcut()")
     public void doBefore(JoinPoint joinPoint) {
         //增加日志流水号
+        //有概率重复
         MDC.put("LOG_ID",System.currentTimeMillis() + RandomUtil.randomString(3));
 
         // 开始打印请求日志
@@ -314,7 +330,39 @@ public class LogAspect {
 
 先把demo01和member里面的内容移动到common的pom.xml里
 
- 
+---
+
+在member里要引入common的依赖,相当于开发的一个依赖
+
+![image-20230528134421602](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528134421602.png)
+
+
+
+---
+
+
+
+ 子模块的依赖是不用添加版本号码的,也就是:
+
+```xml
+<version> xxxxxxx</version>
+```
+
+这一行是可以省略的,父模块里有就行,以后更新修改父模块里面的东西就行
+
+
+
+---
+
+最后效果的话可以看见
+
+![image-20230528134711221](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528134711221.png)
+
+---
+
+
+
+
 
 关于application.properties的位置
 
@@ -361,3 +409,37 @@ public class LogAspect {
 ![image-20230528122955518](C:\Users\yangstar\AppData\Roaming\Typora\typora-user-images\image-20230528122955518.png)
 
 ![image-20230528123028566](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528123028566.png)
+
+
+
+
+
+路由转发配置
+
+![image-20230528123724796](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528123724796.png)
+
+yaml和properties是可以相互转换的
+
+![image-20230528123630309](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528123630309.png)
+
+---
+
+让Gateway打印日志
+
+在vm options 参数里面填写
+
+如果没找到
+
+> https://blog.csdn.net/qq_42971035/article/details/124585780
+
+![image-20230528135629599](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528135629599.png)
+
+```
+ -Dreactor.netty.http.server.accessLogEnabled=true
+```
+
+![image-20230528135435305](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528135435305.png)
+
+成功打印
+
+![image-20230528135537789](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528135537789.png)
