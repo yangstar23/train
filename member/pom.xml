@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.example</groupId>
+        <groupId>com.yangstar</groupId>
         <artifactId>demo1</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -18,10 +18,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>common</artifactId>
 
+        <dependency>
+            <groupId>com.yangstar</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
 

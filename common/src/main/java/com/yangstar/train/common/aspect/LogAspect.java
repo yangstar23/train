@@ -1,4 +1,4 @@
-package com.example.yangstar.train.common.aspect;
+package com.yangstar.train.common.aspect;
 
 import cn.hutool.core.util.RandomUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -34,7 +34,7 @@ public class LogAspect {
      * 定义一个切点
      */
     //通用的写法
-    @Pointcut("execution(public * com.example.yangstar..*Controller.*(..))")
+    @Pointcut("execution(public * com.yangstar..*Controller.*(..))")
     public void controllerPointcut() {
     }
 
