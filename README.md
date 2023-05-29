@@ -1,7 +1,7 @@
 # train
-微服务实现12306
+使用微服务实现12306
 
-第一次使用微服务吧,挺高大上的
+
 
 
 
@@ -15,11 +15,11 @@
 
 
 
-
-
 # 日志
 
 ## 添加固定代码
+
+member模块的启动类
 
 ```java
 添加固定代码
@@ -40,6 +40,29 @@ public class MemberApplication {
 
 
 ## banner的作用
+
+```
+				_ooOoo_
+                   o8888888o
+                   88" . "88
+                   (| ^_^ |)
+                   O\  =  /O
+                ____/`---'\____
+              .'  \\|     |//  `.
+             /  \\|||  :  |||//  \
+            /  _||||| -:- |||||-  \
+            |   | \\\  -  /// |   |
+            | \_|  ''\---/''  |   |
+            \  .-\__  `-`  ___/-. /
+          ___`. .'  /--.--\  `. . ___
+        ."" '<  `.___\_<|>_/___.'  >'"".
+      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+========`-.____`-.___\_____/___.-`____.-'========
+      \  \ `-.   \_ __\ /__ _/   .-` /  /
+                     `=---='
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         佛祖保佑       永不宕机       永无Bug
+```
 
 
 
@@ -443,3 +466,73 @@ yaml和properties是可以相互转换的
 成功打印
 
 ![image-20230528135537789](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528135537789.png)
+
+
+
+
+
+## 本地数据配置
+
+
+
+
+
+## mybatis集成
+
+引入依赖根pom和common的pom下
+
+```
+<dependency>
+   <groupId>org.mybatis.spring.boot</groupId>
+   <artifactId>mybatis-spring-boot-starter</artifactId>
+   <version>2.1.3</version>
+</dependency>
+
+<dependency>
+   <groupId>mysql</groupId>
+   <artifactId>mysql-connector-java</artifactId>
+   <version>8.0.32</version>
+</dependency>
+```
+
+
+
+---
+
+新增一个接口
+
+![image-20230528152026295](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528152026295.png)
+
+让启动类去扫描接口
+
+![image-20230528151929412](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230528151929412.png)
+
+
+
+
+
+
+
+
+
+
+
+告诉sql语句在哪里
+
+```
+# mybatis xml路径
+mybatis.mapper-locations=classpath:/mapper/**/*.xml
+logging.level.com.jiawa.train.member.mapper=trace
+```
+
+
+
+
+
+
+
+```
+# mybatis xml路径
+mybatis.mapper-locations=classpath:/mapper/**/*.xml
+logging.level.com.jiawa.train.member.mapper=trace
+```
