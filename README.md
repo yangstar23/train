@@ -578,10 +578,48 @@ npm install ant-design-vue --save
 
 
 
-### 图标安装
+### 图标的安装
+
+
 
 ```
 npm install --save @ant-design/icons-vue
 ```
 
 ![image-20230601120127482](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601120127482.png)
+
+
+
+官方文档并没有说怎么引入,有点无语
+
+
+
+main.js像这样写就可以引入了
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+//注册ant
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
+//引入ant图标
+import * as Icons from '@ant-design/icons-vue';
+
+const app = createApp(App);
+app.use(Antd).use(store).use(router).mount('#app');
+
+
+//全局注册ant图标
+const icons = Icons;
+for (const i in icons) {
+    app.component(i, icons[i]);
+}
+```
+
+
+
+## 注册和登录页面的开发
+
+![image-20230601131140233](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601131140233.png)

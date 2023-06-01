@@ -37,8 +37,9 @@
 import { defineComponent, reactive } from 'vue';
 export default defineComponent({
   setup() {
+    //表单数据
     const formState = reactive({
-      username: '',
+      username: 'yangstar',
       password: '',
       remember: true,
     });
