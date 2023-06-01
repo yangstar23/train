@@ -643,3 +643,111 @@ java.sql.SQLSyntaxErrorException: Unknown database 'member'
 2023-06-01 15:06:08.790 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
 2023-06-01 15:06:08.790 INFO  c.yangstar.train.member.config.MemberApplication  :22   [32m                  [0;39m 启动成功！！
 2023-06-01 15:06:08.790 INFO  c.yangstar.train.member.config.MemberApplication  :23   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-06-01 15:10:52.081 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 15:10:52.081 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-06-01 15:10:52.082 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-06-01 15:10:52.085 INFO  com.yangstar.train.common.aspect.LogAspect        :54   [32m1685603452084p6z  [0;39m ------------- 开始 -------------
+2023-06-01 15:10:52.086 INFO  com.yangstar.train.common.aspect.LogAspect        :55   [32m1685603452084p6z  [0;39m 请求地址: http://localhost:8001/member/member/count GET
+2023-06-01 15:10:52.087 INFO  com.yangstar.train.common.aspect.LogAspect        :56   [32m1685603452084p6z  [0;39m 类名方法: com.yangstar.train.member.controller.MemberController.count
+2023-06-01 15:10:52.088 INFO  com.yangstar.train.common.aspect.LogAspect        :57   [32m1685603452084p6z  [0;39m 远程地址: 127.0.0.1
+2023-06-01 15:10:52.089 INFO  com.yangstar.train.common.aspect.LogAspect        :78   [32m1685603452084p6z  [0;39m 请求参数: []
+2023-06-01 15:10:52.089 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m1685603452084p6z  [0;39m HikariPool-2 - Starting...
+2023-06-01 15:10:52.118 INFO  com.zaxxer.hikari.pool.HikariPool                 :565  [32m1685603452084p6z  [0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13a4d4cb
+2023-06-01 15:10:52.119 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m1685603452084p6z  [0;39m HikariPool-2 - Start completed.
+2023-06-01 15:10:52.120 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m1685603452084p6z  [0;39m ==>  Preparing: select count(1) from member
+2023-06-01 15:10:52.121 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m1685603452084p6z  [0;39m ==> Parameters: 
+2023-06-01 15:10:52.124 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m1685603452084p6z  [0;39m <==    Columns: count(1)
+2023-06-01 15:10:52.124 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m1685603452084p6z  [0;39m <==        Row: 2
+2023-06-01 15:10:52.125 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m1685603452084p6z  [0;39m <==      Total: 1
+2023-06-01 15:10:52.126 INFO  com.yangstar.train.common.aspect.LogAspect        :90   [32m1685603452084p6z  [0;39m 返回结果: 2
+2023-06-01 15:10:52.126 INFO  com.yangstar.train.common.aspect.LogAspect        :91   [32m1685603452084p6z  [0;39m ------------- 结束 耗时：42 ms -------------
+2023-06-01 15:10:56.940 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-01 15:10:56.978 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8001"]
+2023-06-01 15:10:56.979 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-06-01 15:10:56.979 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-01 15:10:56.982 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [member] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-06-01 15:10:56.983 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [member] appears to have started a thread named [HikariPool-2 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-06-01 15:10:56.983 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8001"]
+2023-06-01 15:10:56.986 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8001"]
+2023-06-01 15:10:56.987 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2023-06-01 15:10:57.004 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2023-06-01 15:10:57.655 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 30212 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-06-01 15:10:57.656 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-06-01 15:10:57.994 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=f4d98ab7-279b-3b7f-82d9-c8f24e6d6dfb
+2023-06-01 15:10:58.160 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-06-01 15:10:58.161 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-06-01 15:10:58.161 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-06-01 15:10:58.162 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-06-01 15:10:58.230 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-06-01 15:10:58.230 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 571 ms
+2023-06-01 15:10:58.640 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-06-01 15:10:59.026 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2023-06-01 15:10:59.032 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2023-06-01 15:10:59.379 INFO  c.yangstar.train.member.config.MemberApplication  :57   [32m                  [0;39m Started MemberApplication in 2.318 seconds (process running for 346.794)
+2023-06-01 15:10:59.381 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-06-01 15:10:59.383 INFO  c.yangstar.train.member.config.MemberApplication  :22   [32m                  [0;39m 启动成功！！
+2023-06-01 15:10:59.383 INFO  c.yangstar.train.member.config.MemberApplication  :23   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-06-01 15:11:02.506 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 15:11:02.507 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-06-01 15:11:02.508 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-06-01 15:11:02.511 INFO  com.yangstar.train.common.aspect.LogAspect        :54   [32m1685603462510myk  [0;39m ------------- 开始 -------------
+2023-06-01 15:11:02.512 INFO  com.yangstar.train.common.aspect.LogAspect        :55   [32m1685603462510myk  [0;39m 请求地址: http://localhost:8001/member/member/count GET
+2023-06-01 15:11:02.512 INFO  com.yangstar.train.common.aspect.LogAspect        :56   [32m1685603462510myk  [0;39m 类名方法: com.yangstar.train.member.controller.MemberController.count
+2023-06-01 15:11:02.512 INFO  com.yangstar.train.common.aspect.LogAspect        :57   [32m1685603462510myk  [0;39m 远程地址: 127.0.0.1
+2023-06-01 15:11:02.513 INFO  com.yangstar.train.common.aspect.LogAspect        :78   [32m1685603462510myk  [0;39m 请求参数: []
+2023-06-01 15:11:02.513 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m1685603462510myk  [0;39m HikariPool-3 - Starting...
+2023-06-01 15:11:02.528 INFO  com.zaxxer.hikari.pool.HikariPool                 :565  [32m1685603462510myk  [0;39m HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f4599d9
+2023-06-01 15:11:02.528 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m1685603462510myk  [0;39m HikariPool-3 - Start completed.
+2023-06-01 15:11:02.528 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m1685603462510myk  [0;39m ==>  Preparing: select count(2) from member
+2023-06-01 15:11:02.528 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m1685603462510myk  [0;39m ==> Parameters: 
+2023-06-01 15:11:02.540 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m1685603462510myk  [0;39m <==    Columns: count(2)
+2023-06-01 15:11:02.541 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m1685603462510myk  [0;39m <==        Row: 2
+2023-06-01 15:11:02.541 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m1685603462510myk  [0;39m <==      Total: 1
+2023-06-01 15:11:02.542 INFO  com.yangstar.train.common.aspect.LogAspect        :90   [32m1685603462510myk  [0;39m 返回结果: 2
+2023-06-01 15:11:02.542 INFO  com.yangstar.train.common.aspect.LogAspect        :91   [32m1685603462510myk  [0;39m ------------- 结束 耗时：32 ms -------------
+2023-06-01 15:11:16.915 INFO  com.yangstar.train.common.aspect.LogAspect        :54   [32m16856034769158vb  [0;39m ------------- 开始 -------------
+2023-06-01 15:11:16.916 INFO  com.yangstar.train.common.aspect.LogAspect        :55   [32m16856034769158vb  [0;39m 请求地址: http://localhost:8001/member/member/count GET
+2023-06-01 15:11:16.916 INFO  com.yangstar.train.common.aspect.LogAspect        :56   [32m16856034769158vb  [0;39m 类名方法: com.yangstar.train.member.controller.MemberController.count
+2023-06-01 15:11:16.916 INFO  com.yangstar.train.common.aspect.LogAspect        :57   [32m16856034769158vb  [0;39m 远程地址: 127.0.0.1
+2023-06-01 15:11:16.916 INFO  com.yangstar.train.common.aspect.LogAspect        :78   [32m16856034769158vb  [0;39m 请求参数: []
+2023-06-01 15:11:16.917 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m16856034769158vb  [0;39m ==>  Preparing: select count(2) from member
+2023-06-01 15:11:16.917 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m16856034769158vb  [0;39m ==> Parameters: 
+2023-06-01 15:11:16.921 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m16856034769158vb  [0;39m <==    Columns: count(2)
+2023-06-01 15:11:16.922 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m16856034769158vb  [0;39m <==        Row: 2
+2023-06-01 15:11:16.922 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m16856034769158vb  [0;39m <==      Total: 1
+2023-06-01 15:11:16.922 INFO  com.yangstar.train.common.aspect.LogAspect        :90   [32m16856034769158vb  [0;39m 返回结果: 2
+2023-06-01 15:11:16.922 INFO  com.yangstar.train.common.aspect.LogAspect        :91   [32m16856034769158vb  [0;39m ------------- 结束 耗时：7 ms -------------
+2023-06-01 15:11:18.808 INFO  com.yangstar.train.common.aspect.LogAspect        :54   [32m16856034788081uh  [0;39m ------------- 开始 -------------
+2023-06-01 15:11:18.810 INFO  com.yangstar.train.common.aspect.LogAspect        :55   [32m16856034788081uh  [0;39m 请求地址: http://localhost:8001/member/member/count GET
+2023-06-01 15:11:18.810 INFO  com.yangstar.train.common.aspect.LogAspect        :56   [32m16856034788081uh  [0;39m 类名方法: com.yangstar.train.member.controller.MemberController.count
+2023-06-01 15:11:18.810 INFO  com.yangstar.train.common.aspect.LogAspect        :57   [32m16856034788081uh  [0;39m 远程地址: 127.0.0.1
+2023-06-01 15:11:18.810 INFO  com.yangstar.train.common.aspect.LogAspect        :78   [32m16856034788081uh  [0;39m 请求参数: []
+2023-06-01 15:11:18.811 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m16856034788081uh  [0;39m ==>  Preparing: select count(2) from member
+2023-06-01 15:11:18.812 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m16856034788081uh  [0;39m ==> Parameters: 
+2023-06-01 15:11:18.814 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m16856034788081uh  [0;39m <==    Columns: count(2)
+2023-06-01 15:11:18.815 TRACE c.yangstar.train.member.mapper.MemberMapper.count :143  [32m16856034788081uh  [0;39m <==        Row: 2
+2023-06-01 15:11:18.815 DEBUG c.yangstar.train.member.mapper.MemberMapper.count :137  [32m16856034788081uh  [0;39m <==      Total: 1
+2023-06-01 15:11:18.815 INFO  com.yangstar.train.common.aspect.LogAspect        :90   [32m16856034788081uh  [0;39m 返回结果: 2
+2023-06-01 15:11:18.815 INFO  com.yangstar.train.common.aspect.LogAspect        :91   [32m16856034788081uh  [0;39m ------------- 结束 耗时：7 ms -------------
+2023-06-01 15:50:30.733 WARN  com.zaxxer.hikari.pool.HikariPool                 :804  [32m                  [0;39m HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=23m31s703ms597µs100ns).
+2023-06-01 20:23:05.924 WARN  com.zaxxer.hikari.pool.HikariPool                 :804  [32m                  [0;39m HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2h24m7s460ms571µs400ns).
+2023-06-01 22:25:43.245 WARN  com.zaxxer.hikari.pool.HikariPool                 :804  [32m                  [0;39m HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h43m13s895ms463µs200ns).
+2023-06-01 22:33:30.521 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2023-06-01 22:33:30.528 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.

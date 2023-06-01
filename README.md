@@ -555,6 +555,189 @@ logging.level.com.yangstar.train.member.mapper=trace
 
 
 
+## 集成MyBatis官方生成器
+
+### 添加模块
+
+![image-20230601151503507](C:/Users/yangstar/AppData/Roaming/Typora/typora-user-images/image-20230601151503507.png)
+
+### 编写新的pom.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yangstar</groupId>
+        <artifactId>demo1</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>generator</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- mybatis generator 自动生成代码插件 -->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <configuration>
+                    <!--<configurationFile>src/main/resources/generator-config-member.xml</configurationFile>-->
+                    <configurationFile>src/main/resources/generator-config-business.xml</configurationFile>
+                    <overwrite>true</overwrite>
+                    <verbose>true</verbose>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.22</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
+```
+
+
+
+
+
+### 创建两个文件
+
+![image-20230601230032837](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601230032837.png)
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- 自动检查关键字，为关键字增加反引号 -->
+        <property name="autoDelimitKeywords" value="true"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--覆盖生成XML文件-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+        <!-- 生成的实体类添加toString()方法 -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+        <!-- 不生成注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 配置数据源，需要根据自己的项目修改 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/train?serverTimezone=UTC"
+                        userId="root"
+                        password="m4a11234">
+        </jdbcConnection>
+
+        <!-- domain类的位置 targetProject是相对pom.xml的路径-->
+        <javaModelGenerator targetProject="..\member\src\main\java"
+                            targetPackage="com.yangstar.train.member.domain"/>
+
+        <!-- mapper xml的位置 targetProject是相对pom.xml的路径 -->
+        <sqlMapGenerator targetProject="..\member\src\main\resources"
+                         targetPackage="mapper"/>
+
+        <!-- mapper类的位置 targetProject是相对pom.xml的路径 -->
+        <javaClientGenerator targetProject="..\member\src\main\java"
+                             targetPackage="com.yangstar.train.member.mapper"
+                             type="XMLMAPPER"/>
+
+        <!--<table tableName="member" domainObjectName="Member"/>-->
+        <table tableName="passenger" domainObjectName="Passenger"/>
+    </context>
+</generatorConfiguration>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- 自动检查关键字，为关键字增加反引号 -->
+        <property name="autoDelimitKeywords" value="true"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--覆盖生成XML文件-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+        <!-- 生成的实体类添加toString()方法 -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+        <!-- 不生成注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 配置数据源，需要根据自己的项目修改 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/train?serverTimezone=UTC"
+                        userId="root"
+                        password="m4a11234">
+        </jdbcConnection>
+
+        <!-- domain类的位置 targetProject是相对pom.xml的路径-->
+        <javaModelGenerator targetProject="..\business\src\main\java"
+                            targetPackage="com.yangstar.train.business.domain"/>
+
+        <!-- mapper xml的位置 targetProject是相对pom.xml的路径 -->
+        <sqlMapGenerator targetProject="..\business\src\main\resources"
+                         targetPackage="mapper"/>
+
+        <!-- mapper类的位置 targetProject是相对pom.xml的路径 -->
+        <javaClientGenerator targetProject="..\business\src\main\java"
+                             targetPackage="com.jiawa.train.business.mapper"
+                             type="XMLMAPPER"/>
+
+        <!--<table tableName="station" domainObjectName="Station"/>-->
+        <!--<table tableName="train" domainObjectName="Train"/>-->
+        <!--<table tableName="train_station" domainObjectName="TrainStation"/>-->
+        <!--<table tableName="train_carriage" domainObjectName="TrainCarriage"/>-->
+        <table tableName="train_seat" domainObjectName="TrainSeat"/>
+    </context>
+</generatorConfiguration>
+```
+
+### 执行插件
+
+![image-20230601225812443](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601225812443.png)
+
+结果:
+
+自动生成了很多东西
+
+![image-20230601230728979](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601230728979.png)
+
 ## 前端的搭建
 
 npm启动
