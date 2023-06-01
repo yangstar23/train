@@ -738,7 +738,19 @@ logging.level.com.yangstar.train.member.mapper=trace
 
 ![image-20230601230728979](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601230728979.png)
 
+
+
+## 完成会员注册的接口
+
+先写service,再写controller
+
+
+
+
+
 ## 前端的搭建
+
+
 
 npm启动
 

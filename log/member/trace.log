@@ -751,3 +751,187 @@ java.sql.SQLSyntaxErrorException: Unknown database 'member'
 2023-06-01 22:25:43.245 WARN  com.zaxxer.hikari.pool.HikariPool                 :804  [32m                  [0;39m HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h43m13s895ms463µs200ns).
 2023-06-01 22:33:30.521 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
 2023-06-01 22:33:30.528 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2023-06-01 23:14:18.525 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.0.Final
+2023-06-01 23:14:18.597 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 57756 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-06-01 23:14:18.599 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-06-01 23:14:18.669 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-01 23:14:18.669 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-01 23:14:19.558 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=9f15cac5-f1c0-3d60-8f60-2bd538c8d6bf
+2023-06-01 23:14:20.262 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-06-01 23:14:20.276 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:14:20.277 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-06-01 23:14:20.278 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-06-01 23:14:20.353 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-06-01 23:14:20.355 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1683 ms
+2023-06-01 23:14:21.253 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-06-01 23:14:22.512 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:14:22.558 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:14:22.580 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2023-06-01 23:14:23.834 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:14:23.841 INFO  c.yangstar.train.member.config.MemberApplication  :57   [32m                  [0;39m Started MemberApplication in 7.076 seconds (process running for 7.802)
+2023-06-01 23:14:23.844 INFO  c.yangstar.train.member.config.MemberApplication  :22   [32m                  [0;39m 启动成功！！
+2023-06-01 23:14:23.844 INFO  c.yangstar.train.member.config.MemberApplication  :23   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-06-01 23:14:43.956 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 23:14:43.956 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-06-01 23:14:43.958 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-06-01 23:14:53.511 INFO  com.yangstar.train.common.aspect.LogAspect        :54   [32m168563249350488m  [0;39m ------------- 开始 -------------
+2023-06-01 23:14:53.512 INFO  com.yangstar.train.common.aspect.LogAspect        :55   [32m168563249350488m  [0;39m 请求地址: http://localhost:8001/member/member/count GET
+2023-06-01 23:14:53.512 INFO  com.yangstar.train.common.aspect.LogAspect        :56   [32m168563249350488m  [0;39m 类名方法: com.yangstar.train.member.controller.MemberController.count
+2023-06-01 23:14:53.513 INFO  com.yangstar.train.common.aspect.LogAspect        :57   [32m168563249350488m  [0;39m 远程地址: 127.0.0.1
+2023-06-01 23:14:53.551 INFO  com.yangstar.train.common.aspect.LogAspect        :78   [32m168563249350488m  [0;39m 请求参数: []
+2023-06-01 23:14:53.589 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m168563249350488m  [0;39m HikariPool-1 - Starting...
+2023-06-01 23:14:53.907 INFO  com.zaxxer.hikari.pool.HikariPool                 :565  [32m168563249350488m  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f9e5519
+2023-06-01 23:14:53.910 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m168563249350488m  [0;39m HikariPool-1 - Start completed.
+2023-06-01 23:14:53.921 DEBUG c.y.t.member.mapper.MemberMapper.countByExample   :137  [32m168563249350488m  [0;39m ==>  Preparing: select count(*) from member
+2023-06-01 23:14:53.951 DEBUG c.y.t.member.mapper.MemberMapper.countByExample   :137  [32m168563249350488m  [0;39m ==> Parameters: 
+2023-06-01 23:14:53.993 TRACE c.y.t.member.mapper.MemberMapper.countByExample   :143  [32m168563249350488m  [0;39m <==    Columns: count(*)
+2023-06-01 23:14:53.994 TRACE c.y.t.member.mapper.MemberMapper.countByExample   :143  [32m168563249350488m  [0;39m <==        Row: 2
+2023-06-01 23:14:53.997 DEBUG c.y.t.member.mapper.MemberMapper.countByExample   :137  [32m168563249350488m  [0;39m <==      Total: 1
+2023-06-01 23:14:54.005 INFO  com.yangstar.train.common.aspect.LogAspect        :90   [32m168563249350488m  [0;39m 返回结果: 2
+2023-06-01 23:14:54.006 INFO  com.yangstar.train.common.aspect.LogAspect        :91   [32m168563249350488m  [0;39m ------------- 结束 耗时：502 ms -------------
+2023-06-01 23:15:40.071 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-06-01 23:15:40.096 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:40.096 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-06-01 23:15:40.099 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-01 23:15:40.101 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [member] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-06-01 23:15:40.102 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:40.104 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:40.108 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-06-01 23:15:40.119 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-06-01 23:15:41.549 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 57756 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-06-01 23:15:41.550 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-06-01 23:15:41.700 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=9f15cac5-f1c0-3d60-8f60-2bd538c8d6bf
+2023-06-01 23:15:41.765 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-06-01 23:15:41.766 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:41.766 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-06-01 23:15:41.766 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-06-01 23:15:41.785 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-06-01 23:15:41.785 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 233 ms
+2023-06-01 23:15:42.012 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-06-01 23:15:43.362 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:15:43.380 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:43.384 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2023-06-01 23:15:43.427 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-06-01 23:15:44.650 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:15:44.653 INFO  c.yangstar.train.member.config.MemberApplication  :57   [32m                  [0;39m Started MemberApplication in 4.438 seconds (process running for 88.614)
+2023-06-01 23:15:44.654 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-06-01 23:15:44.655 INFO  c.yangstar.train.member.config.MemberApplication  :22   [32m                  [0;39m 启动成功！！
+2023-06-01 23:15:44.655 INFO  c.yangstar.train.member.config.MemberApplication  :23   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-06-01 23:15:44.674 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:44.674 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-06-01 23:15:44.676 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:44.676 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:46.014 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 57756 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-06-01 23:15:46.014 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-06-01 23:15:46.153 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=9f15cac5-f1c0-3d60-8f60-2bd538c8d6bf
+2023-06-01 23:15:46.221 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-06-01 23:15:46.222 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:46.222 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-06-01 23:15:46.222 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-06-01 23:15:46.244 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-06-01 23:15:46.244 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 228 ms
+2023-06-01 23:15:46.493 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-06-01 23:15:47.735 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:15:47.751 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:15:47.756 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2023-06-01 23:15:49.039 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:15:49.041 INFO  c.yangstar.train.member.config.MemberApplication  :57   [32m                  [0;39m Started MemberApplication in 4.291 seconds (process running for 93.002)
+2023-06-01 23:15:49.042 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-06-01 23:15:49.042 INFO  c.yangstar.train.member.config.MemberApplication  :22   [32m                  [0;39m 启动成功！！
+2023-06-01 23:15:49.044 INFO  c.yangstar.train.member.config.MemberApplication  :23   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-06-01 23:19:19.680 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-06-01 23:19:19.701 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:19:19.701 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-06-01 23:19:19.702 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:19:19.705 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:19:21.049 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 57756 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-06-01 23:19:21.049 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-06-01 23:19:21.184 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=817e901d-1faf-3d83-9567-d703e053f7c0
+2023-06-01 23:19:21.251 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-06-01 23:19:21.252 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:19:21.252 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-06-01 23:19:21.252 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-06-01 23:19:21.270 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-06-01 23:19:21.270 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 220 ms
+2023-06-01 23:19:21.281 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:592  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController' defined in file [F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes\com\yangstar\train\member\controller\MemberController.class]: Post-processing of merged bean definition failed
+2023-06-01 23:19:21.281 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-06-01 23:19:21.285 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-01 23:19:21.301 ERROR org.springframework.boot.SpringApplication        :820  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController' defined in file [F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes\com\yangstar\train\member\controller\MemberController.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.yangstar.train.member.config.MemberApplication.main(MemberApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.yangstar.train.member.controller.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7b6d2b55]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:740)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:672)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:340)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:277)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1082)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/yangstar/train/member/service/MemberService
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2371)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:735)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.yangstar.train.member.service.MemberService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 28 common frames omitted
+2023-06-01 23:26:06.361 INFO  c.yangstar.train.member.config.MemberApplication  :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.7 with PID 57756 (F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1\member\target\classes started by yangstar in F:\网赚学习\04.新版Springboot3.0打造能落地的高并发仿12306售票-无密更新中第八章\code\demo1)
+2023-06-01 23:26:06.362 INFO  c.yangstar.train.member.config.MemberApplication  :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-06-01 23:26:06.485 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=9f15cac5-f1c0-3d60-8f60-2bd538c8d6bf
+2023-06-01 23:26:06.538 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2023-06-01 23:26:06.539 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:26:06.539 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-06-01 23:26:06.540 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-06-01 23:26:06.558 INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/member]        :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-06-01 23:26:06.558 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 194 ms
+2023-06-01 23:26:06.776 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-06-01 23:26:08.019 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:26:08.033 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:26:08.038 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2023-06-01 23:26:09.320 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m                  [0;39m Cannot determine local hostname
+2023-06-01 23:26:09.325 INFO  c.yangstar.train.member.config.MemberApplication  :57   [32m                  [0;39m Started MemberApplication in 4.294 seconds (process running for 713.286)
+2023-06-01 23:26:09.326 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-06-01 23:26:09.326 INFO  c.yangstar.train.member.config.MemberApplication  :22   [32m                  [0;39m 启动成功！！
+2023-06-01 23:26:09.328 INFO  c.yangstar.train.member.config.MemberApplication  :23   [32m                  [0;39m 测试地址: 	http://127.0.0.1:8001/hello
+2023-06-01 23:26:10.642 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-01 23:26:10.661 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:26:10.663 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-06-01 23:26:10.664 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8001"]
+2023-06-01 23:26:10.665 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8001"]
