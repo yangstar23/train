@@ -42,7 +42,7 @@ public class MemberApplication {
 ## banner的作用
 
 ```
-				_ooOoo_
+					_ooOoo_
                    o8888888o
                    88" . "88
                    (| ^_^ |)
@@ -536,3 +536,11 @@ logging.level.com.jiawa.train.member.mapper=trace
 mybatis.mapper-locations=classpath:/mapper/**/*.xml
 logging.level.com.jiawa.train.member.mapper=trace
 ```
+
+
+
+
+
+## 前端的搭建
+
+![image-20230601112242759](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601112242759.png)
