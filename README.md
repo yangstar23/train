@@ -543,4 +543,27 @@ logging.level.com.jiawa.train.member.mapper=trace
 
 ## 前端的搭建
 
+npm启动
+
 ![image-20230601112242759](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601112242759.png)
+
+
+
+前端的jar包
+
+![image-20230601112545945](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601112545945.png)
+
+
+
+
+
+## 引入AntDesignVue
+
+```
+先安装
+npm install ant-design-vue --save
+```
+
+![image-20230601113941894](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601113941894.png)
+
+自己引入了
