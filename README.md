@@ -574,3 +574,14 @@ npm install ant-design-vue --save
 
 部分注册是全局注册的区别
 
+
+
+
+
+### 图标安装
+
+```
+npm install --save @ant-design/icons-vue
+```
+
+![image-20230601120127482](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601120127482.png)
