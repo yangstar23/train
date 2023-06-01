@@ -559,6 +559,8 @@ npm启动
 
 ## 引入AntDesignVue
 
+### 安装
+
 ```
 先安装
 npm install ant-design-vue --save
@@ -567,3 +569,8 @@ npm install ant-design-vue --save
 ![image-20230601113941894](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601113941894.png)
 
 自己引入了
+
+### 注册
+
+部分注册是全局注册的区别
+
