@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MemberService {
-
     @Resource
     private MemberMapper memberMapper;
     public int count() {

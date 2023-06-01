@@ -541,6 +541,20 @@ logging.level.com.jiawa.train.member.mapper=trace
 
 
 
+```
+# 把mapper这个包日志级别改成trace
+logging.level.com.yangstar.train.member.mapper=trace
+
+```
+
+这样就可以打印日志???什么原理
+
+![image-20230601145948378](C:/Users/yangstar/AppData/Roaming/Typora/typora-user-images/image-20230601145948378.png)
+
+
+
+
+
 ## 前端的搭建
 
 npm启动
@@ -623,3 +637,16 @@ for (const i in icons) {
 ## 注册和登录页面的开发
 
 ![image-20230601131140233](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230601131140233.png)
+
+
+
+
+
+## 发送短信的接口开发
+
+开始---->输入手机号----->点发送按钮----->后端接口参数校验---->手机号是否注册过
+
+
+
+
+
