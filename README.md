@@ -913,6 +913,34 @@ public class CommonResp<T> {
 
 
 
+### 修改Controller
+
+![image-20230602145838898](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602145838898.png)
+
+```java
+@GetMapping("/count")
+public CommonResp<Integer> count() {
+    int count = memberService.count();
+    CommonResp<Integer> commonResp = new CommonResp<>();
+    commonResp.setContent(count);
+    return commonResp;
+}
+
+
+@PostMapping("/register")
+//long是返回结果
+//String mobile是传入参数
+public CommonResp<Long> register(MemberSendCodeReq req) {
+    long register = memberService.register(req);
+    return new CommonResp<>(register);
+}
+```
+
+
+
+效果;
+
+![image-20230602145924130](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602145924130.png)
 
 
 
@@ -926,14 +954,63 @@ public class CommonResp<T> {
 
 
 
+## 统一的异常处理设置
+
+处理前:
+
+这些东西不能让客户看见
+
+![image-20230602150006330](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602150006330.png)
+
+
+
+处理后:
+
+![image-20230602150536971](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602150536971.png)
 
 
 
 
 
+新建文件
+
+![image-20230602150257315](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602150257315.png)
+
+```java
+package com.yangstar.train.common.controller;
 
 
+import com.yangstar.train.common.resp.CommonResp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 统一异常处理、数据预处理等
+ */
+@ControllerAdvice
+public class ControllerExceptionHandler {
+
+    private static final Logger LOG = LoggerFactory.getLogger(ControllerExceptionHandler.class);
+
+    /**
+     * 所有异常统一处理
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(value = Exception.class)
+    @ResponseBody
+    public CommonResp exceptionHandler(Exception e) {
+        CommonResp commonResp = new CommonResp();
+        LOG.error("系统异常：", e);
+        commonResp.setSuccess(false);
+        commonResp.setMessage("系统出现异常，请联系管理员");
+        return commonResp;
+    }
+}
+```
 
 
 

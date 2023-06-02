@@ -28,8 +28,6 @@ public class MemberController {
 
 
     @PostMapping("/register")
-    //long是返回结果
-    //String mobile是传入参数
     public CommonResp<Long> register(MemberSendCodeReq req) {
         long register = memberService.register(req);
         return new CommonResp<>(register);
