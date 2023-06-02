@@ -7,6 +7,8 @@
 package com.yangstar.train.member.service;
 
 import cn.hutool.core.collection.CollUtil;
+import com.yangstar.train.common.exception.BusinessException;
+import com.yangstar.train.common.exception.BusinessExceptionEnum;
 import com.yangstar.train.member.domain.Member;
 import com.yangstar.train.member.domain.MemberExample;
 import com.yangstar.train.member.mapper.MemberMapper;
@@ -40,7 +42,7 @@ public class MemberService {
         if(CollUtil.isNotEmpty(list))
         {
             //手机号存在，抛出异常
-            throw new RuntimeException("手机号已经存在");
+            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_EXIST);
 
         }
         Member member = new Member();

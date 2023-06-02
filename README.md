@@ -1014,6 +1014,18 @@ public class ControllerExceptionHandler {
 
 
 
+## 使用自定义异常,处理出问题的业务
+
+![image-20230602151322355](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602151322355.png)
+
+
+
+![image-20230602155853729](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602155853729.png)
+
+
+
+
+
 ## 前端的搭建
 
 

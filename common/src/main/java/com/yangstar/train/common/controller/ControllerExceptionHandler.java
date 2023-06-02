@@ -1,6 +1,7 @@
 package com.yangstar.train.common.controller;
 
 
+import com.yangstar.train.common.exception.BusinessException;
 import com.yangstar.train.common.resp.CommonResp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +22,8 @@ public class ControllerExceptionHandler {
      * @param e
      * @return
      */
-    //接口出现异常，会进入这个方法
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    //返回自己写的CommonResp
     public CommonResp exceptionHandler(Exception e) {
         CommonResp commonResp = new CommonResp();
         LOG.error("系统异常：", e);
@@ -38,7 +37,7 @@ public class ControllerExceptionHandler {
      * @param e
      * @return
      */
-/*    @ExceptionHandler(value = BusinessException.class)
+    @ExceptionHandler(value = BusinessException.class)
     @ResponseBody
     public CommonResp exceptionHandler(BusinessException e) {
         CommonResp commonResp = new CommonResp();
@@ -46,14 +45,16 @@ public class ControllerExceptionHandler {
         commonResp.setSuccess(false);
         commonResp.setMessage(e.getE().getDesc());
         return commonResp;
-    }*/
+    }
 
-/*    *//**
+
+
+    /**
      * 校验异常统一处理
      * @param e
      * @return
-     *//*
-    @ExceptionHandler(value = BindException.class)
+     */
+/*    @ExceptionHandler(value = BindException.class)
     @ResponseBody
     public CommonResp exceptionHandler(BindException e) {
         CommonResp commonResp = new CommonResp();
