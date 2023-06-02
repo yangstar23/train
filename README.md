@@ -744,11 +744,59 @@ logging.level.com.yangstar.train.member.mapper=trace
 
 先写service,再写controller
 
+### MemberService
 
+```java
+public long register(String mobile){
+        //判断手机号是否已经注册
+        MemberExample memberExample = new MemberExample();
+        memberExample.createCriteria().andMobileEqualTo(mobile);
+        List<Member> list = memberMapper.selectByExample(memberExample);
 
-post接口缩写
+        //查一个列表是否为空，如果为空，就抛出一个运行时异常，提示“手机号已经存在”。
+      /*  isEmpty、isNotEmpty方法
+        判断集合是否为空（包括null和没有元素的集合*/
+      /*  集合工具 CollUtil
+        这个工具主要增加了对数组、集合类的操作。*/
+        if(CollUtil.isNotEmpty(list))
+        {
+            //手机号存在，抛出异常
+            throw new RuntimeException("手机号已经存在");
+
+        }
+        Member member = new Member();
+        //新增的时候，id是自增的，这里是是用此时的时间戳作为id
+        member.setId(System.currentTimeMillis());
+        member.setMobile(mobile);
+        memberMapper.insert(member);
+        return member.getId();
+    }
+```
+
+当手机号码已经被注册的时候
+
+![image-20230602125606009](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602125606009.png)
+
+### MemberController
+
+```java
+@PostMapping("/register")
+   //long是返回结果
+    //String mobile是传入参数
+public Long register(String mobile) {
+    return memberService.register(mobile);
+}
+```
+
+### post接口缩写
 
 ![image-20230602010545442](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602010545442.png)
+
+## 封装请求参数和返回结果
+
+![image-20230602130153298](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602130153298.png)
+
+这样写的话参数太多,不方便观看
 
 
 

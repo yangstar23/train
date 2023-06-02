@@ -41,10 +41,6 @@ public class MemberService {
             throw new RuntimeException("手机号已经存在");
 
         }
-
-
-
-
         Member member = new Member();
         //新增的时候，id是自增的，这里是是用此时的时间戳作为id
         member.setId(System.currentTimeMillis());

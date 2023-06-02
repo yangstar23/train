@@ -1,5 +1,6 @@
 package com.yangstar.train.member.controller;
 
+import com.yangstar.train.member.req.MemberSendCodeReq;
 import com.yangstar.train.member.service.MemberService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,11 +24,12 @@ public class MemberController {
 
 
     @PostMapping("/register")
-    public Long register(String mobile) {
-        return memberService.register(mobile);
+
+    //long是返回结果
+    //String mobile是传入参数
+    public Long register(MemberSendCodeReq req) {
+        return memberService.register(req);
     }
-
-
 
 }
 
