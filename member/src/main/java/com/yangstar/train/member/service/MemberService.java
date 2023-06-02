@@ -10,6 +10,7 @@ import cn.hutool.core.collection.CollUtil;
 import com.yangstar.train.member.domain.Member;
 import com.yangstar.train.member.domain.MemberExample;
 import com.yangstar.train.member.mapper.MemberMapper;
+import com.yangstar.train.member.req.MemberSendCodeReq;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,8 @@ public class MemberService {
          return Math.toIntExact(memberMapper.countByExample(null));
     }
 
-    public long register(String mobile){
+    public long register(MemberSendCodeReq req){
+        String mobile = req.getMobile();
         //判断手机号是否已经注册
         MemberExample memberExample = new MemberExample();
         memberExample.createCriteria().andMobileEqualTo(mobile);

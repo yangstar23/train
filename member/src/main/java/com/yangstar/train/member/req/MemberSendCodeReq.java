@@ -5,12 +5,25 @@
 
 package com.yangstar.train.member.req;
 
-import lombok.Data;
 
-@Data
 public class MemberSendCodeReq {
+
 
     private String mobile;
 
 
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    @Override
+    public String toString(){
+        return "MemberSendCodeReq{" +
+                "mobile='" + mobile + '\'' +
+                '}';
+    }
 }

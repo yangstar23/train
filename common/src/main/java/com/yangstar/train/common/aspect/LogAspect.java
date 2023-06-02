@@ -58,7 +58,7 @@ public class LogAspect {
 
         // 打印请求参数
         Object[] args = joinPoint.getArgs();
-        // LOG.info("请求参数: {}", JSONObject.toJSONString(args));
+//         LOG.info("请求参数: {}", JSONObject.toJSONString(args));
 
         // 排除特殊类型的参数，如文件类型
         Object[] arguments = new Object[args.length];
@@ -71,7 +71,9 @@ public class LogAspect {
             arguments[i] = args[i];
         }
         // 排除字段，敏感字段或太长的字段不显示：身份证、手机号、邮箱、密码等
-        String[] excludeProperties = {};
+        //下面返回参数时候,会把密码和身份证号码过滤掉,不会打印出来
+        //然后将对象转换为JSON字符串并打印到日志中
+        String[] excludeProperties = {"password", "idCard"};
         PropertyPreFilters filters = new PropertyPreFilters();
         PropertyPreFilters.MySimplePropertyPreFilter excludefilter = filters.addFilter();
         excludefilter.addExcludes(excludeProperties);

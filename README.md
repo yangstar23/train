@@ -794,9 +794,146 @@ public Long register(String mobile) {
 
 ## 封装请求参数和返回结果
 
-![image-20230602130153298](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602130153298.png)
-
 这样写的话参数太多,不方便观看
+
+![image-20230602134734740](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602134734740.png)
+
+于是我们自己创建一个Req
+
+![image-20230602135746042](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602135746042.png)
+
+```java
+/**
+ * @author yangstar
+ * @date 2023/6/1 14:27
+ */
+
+package com.yangstar.train.member.req;
+
+
+public class MemberSendCodeReq {
+
+
+    private String mobile;
+
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    @Override
+    public String toString(){
+        return "MemberSendCodeReq{" +
+                "mobile='" + mobile + '\'' +
+                '}';
+    }
+}
+```
+
+
+
+
+
+
+
+### 返回值变成统一实体类
+
+![image-20230602143601181](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602143601181.png)
+
+```java
+package com.yangstar.train.common.resp;
+
+//这是一个泛型类，T是一个占位符，表示一个不确定的类型
+public class CommonResp<T> {
+
+    /**
+     * 业务上的成功或失败
+     */
+    private boolean success = true;
+
+    /**
+     * 返回信息
+     */
+    private String message;
+
+    /**
+     * 返回泛型数据，自定义类型
+     */
+    //列表数据
+    private T content;
+
+    public CommonResp() {
+    }
+
+    public CommonResp(T content) {
+        this.content = content;
+    }
+
+    public boolean getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public T getContent() {
+        return content;
+    }
+
+    public void setContent(T content) {
+        this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("CommonResp{");
+        sb.append("success=").append(success);
+        sb.append(", message='").append(message).append('\'');
+        sb.append(", content=").append(content);
+        sb.append('}');
+        return sb.toString();
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
