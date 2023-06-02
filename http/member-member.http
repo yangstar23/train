@@ -1,4 +1,4 @@
-GET http://localhost:8001/member/member/count
+GET http://localhost:8000/member/member/count
 Accept: application/json
 token: 123
 
@@ -6,7 +6,8 @@ token: 123
 POST http://localhost:8000/member/member/register
 Content-Type: application/x-www-form-urlencoded
 
-mobile=12345678
+mobile=123456789
+
 
 ###
 POST http://localhost:8000/member/member/send-code

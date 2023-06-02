@@ -746,6 +746,10 @@ logging.level.com.yangstar.train.member.mapper=trace
 
 
 
+post接口缩写
+
+![image-20230602010545442](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20230602010545442.png)
+
 
 
 ## 前端的搭建
